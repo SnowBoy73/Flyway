@@ -1,0 +1,15 @@
+version "3.3"
+
+services:
+  app-database:
+    image: mysql
+    restart: always
+    volumes:
+      - ./db/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT__PASSWORD: MY_S€cr€T_P@ssw0rD
+      MYSQL_DATABASE: ContactBook
+    ports:
+      - 63306:3366
+          
+          
