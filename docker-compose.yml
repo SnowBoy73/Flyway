@@ -7,9 +7,9 @@ services:
     volumes:
       - ./db/data:/var/lib/mysql
     environment:
-      MYSQL_ROOT__PASSWORD: MY_S€cr€T_P@ssw0rD
+      MYSQL_ROOT_PASSWORD: MY_S€cr€T_P@ssw0rD
       MYSQL_DATABASE: ContactBook
     ports:
-      - 63306:3366
+      - 63306:3306
           
           
