@@ -1,0 +1,1 @@
+INSERT IGNORE INTO WorkoutType VALUES ("Wk", "Walking"), ("Rn", "Running"), ("Bc", "Bicycling");
