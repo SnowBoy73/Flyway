@@ -10,11 +10,11 @@ services:
       MYSQL_DATABASE: Workout
     ports:
       - 63306:3306
-    flyway:
-      image: flyway/flyway
-      command: migrate
-      volumes:
-        - ./db:/flyway/sql
-        - ./db:/flyway/conf
-      depends_on:
-        - app-database
+  flyway:
+    image: flyway/flyway
+    command: migrate
+    volumes:
+      - ./db:/flyway/sql
+      - ./db:/flyway/conf
+    depends_on:
+      - app-database
