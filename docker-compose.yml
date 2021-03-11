@@ -8,8 +8,15 @@ services:
       - ./db/data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: MY_S€cr€T_P@ssw0rD
-      MYSQL_DATABASE: ContactBook
+      MYSQL_DATABASE: Workout
     ports:
       - 63306:3306
-          
-          
+      
+    flyway:
+      image: flyway/flyway
+      command: migrate
+      volumes:
+        - ./db:/flyway/sql
+        - ./db:/flyway/conf
+      depends_on: 
+        - app-database
